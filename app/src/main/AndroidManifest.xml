@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Home"
         tools:targetApi="31">
         <activity
+            android:name=".sudah_selesai"
+            android:exported="false" />
+        <activity
+            android:name=".belum_selesai"
+            android:exported="false" />
+        <activity
             android:name=".popup_layout"
             android:exported="false" />
         <activity
