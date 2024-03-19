@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login"
+    android:orientation="vertical"
     android:padding="38dp"
-    android:orientation="vertical">
+    tools:context=".signUp">
 
     <ImageView
         android:layout_width="137dp"
         android:layout_height="76dp"
         android:src="@drawable/logo_caption"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,15 +26,43 @@
             android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/purple"
             android:textSize="16dp"
-            android:paddingTop="30dp"
-            android:paddingBottom="20dp"/>
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:hint="Full Name"
+            app:hintEnabled="true"
+            android:textColorHint="@color/purple"
+            android:gravity="center"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/purple"
+                android:background="@drawable/button2"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="5dp"
         app:cardElevation="5dp">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         app:cardElevation="5dp">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -89,24 +117,43 @@
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:hint="Confirm Password"
+            app:hintEnabled="true"
+            android:textColorHint="@color/purple"
+            android:gravity="center"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/purple">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/purple"
+                android:background="@drawable/button2"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/signIn"
         android:layout_width="276dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:text="Sign in"
         android:fontFamily="@font/montserrat_bold"
         android:background="@drawable/button1"
         android:layout_gravity="center"/>
-
-    <TextView
-        android:id="@+id/signUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create an account"
-        android:gravity="center"
-        android:fontFamily="@font/montserrat_bolditalic"
-        android:paddingTop="30dp"
-        android:textColor="@color/purple"
-        />
 </LinearLayout>
